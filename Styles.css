@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Chillax-bold";
+}
+
+body {
+  background-color: #0b0f2b;
+  color: #ffffff;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  background: #333554;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  border-radius: 0 0 15px 15px;
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  transition: transform 0.3s ease;
+}
+
+
+.logo {
+  width: 120px;
+  margin-top: 8px;
+}
+
+nav .logo {
+  display: none;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li a {
+  color: #9c9c9c;
+  display: block;
+  margin: 0 2px;
+  font-weight: 600;
+  padding: 8px 18px;
+  transition: 0.2s;
+  border-radius: 30px;
+}
+
+nav ul li a:hover {
+  background: #1c2331;
+  color: #ffffff;
+}
+
+nav ul li a.active {
+  background: #1c2331;
+  color: #ffffff;
+}
+
+.label {
+  display: none;
+  height: fit-content;
+  cursor: pointer;
+  padding: 3px 8px;
+  border-radius: 7px;
+  transition: 0.2s;
+}
+
+.label:hover {
+  background: #1c2331;
+}
+
+.label div {
+  width: 30px;
+  height: 2px;
+  margin: 6px 0;
+  background: #ecf1f3;
+}
+
+@media only screen and (max-width: 1100px) {
+  header {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  #home {
+    position: relative;
+    z-index: -1;
+  }
+
+  #nav_check:checked ~ nav {
+    left: 0;
+    border-radius: 0 20px 20px 0;
+  }
+  nav {
+    position: absolute;
+    left: -300px;
+    top: 0;
+    z-index: 999;
+    width: 280px;
+    height: 100vh;
+    background-color: #333554;
+    transition: 0.2s;
+    box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.05);
+  }
+
+  nav .logo {
+    display: block;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+  }
+
+  nav ul {
+    display: block;
+    padding: 0 20px;
+    margin-top: 30px;
+  }
+
+  nav ul li a {
+    margin-bottom: 5px;
+    padding: 10px 15px;
+    border-radius: 30px;
+  }
+
+  .label {
+    display: block;
+  }
+}
+
+h1 {
+  margin: 15px;
+}
+
+p {
+  margin: 25px;
+}
+
+.scale-up-top {
+  animation: scale-up-top 3s;
+}
+
+@keyframes scale-up-top {
+  0% {
+    transform: scale(0.5);
+    transform-origin: center top;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: center top;
+  }
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #007bff;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content {
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.hero-description {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #e0e0e0;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.project-card {
+  margin-bottom: 30px;
+}
+
+.project-card img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.project-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.project-card p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.section {
+  background-color: rgb(26, 30, 59);
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.color {
+  --primary-100: #ffc107;
+  --primary-200: #dda400;
+  --primary-300: #916400;
+  --accent-100: #00bcd4;
+  --accent-200: #005e74;
+  --text-100: #ffffff;
+  --text-200: #9c9c9c;
+  --bg-100: #0b0f2b;
+  --bg-200: #1a1e3b;
+  --bg-300: #333554;
+}
